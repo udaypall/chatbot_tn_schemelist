@@ -1,0 +1,47 @@
+
+# Program to create a .gitignore file for Python and VS Code
+
+gitignore_content = """
+# Python cache files
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# VS Code settings
+.vscode/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Build and distribution files
+build/
+dist/
+*.egg-info/
+
+# Testing and coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Log files
+*.log
+
+# OS-generated files (Windows)
+Thumbs.db
+Desktop.ini
+"""
+
+with open(".gitignore", "w", encoding="utf-8") as file:
+    file.write(gitignore_content.strip() + "\n")
+
+print(".gitignore file created successfully!")
